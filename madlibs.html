@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Madlibsboii!</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f0f0; }
+        h1 { color: #333; }
+        input { margin: 5px 0; padding: 5px; width: 200px; }
+        button { padding: 5px 10px; margin-top: 10px; }
+        p { background: #fff; padding: 10px; border-radius: 5px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Madlibsboii!</h1>
+
+    <label>Noun:</label><br>
+    <input type="text" id="noun"><br>
+
+    <label>Verb:</label><br>
+    <input type="text" id="verb"><br>
+
+    <label>Second Noun:</label><br>
+    <input type="text" id="noun2"><br>
+
+    <label>Third Noun:</label><br>
+    <input type="text" id="noun3"><br>
+
+    <label>Second Verb:</label><br>
+    <input type="text" id="verb2"><br>
+
+    <label>Fourth Noun:</label><br>
+    <input type="text" id="noun4"><br>
+
+    <button onclick="generateMadlib()">Generate Madlib</button>
+
+    <p id="result"></p>
+
+    <script>
+        function generateMadlib() {
+            const noun = document.getElementById('noun').value;
+            const verb = document.getElementById('verb').value;
+            const noun2 = document.getElementById('noun2').value;
+            const noun3 = document.getElementById('noun3').value;
+            const verb2 = document.getElementById('verb2').value;
+            const noun4 = document.getElementById('noun4').value;
+
+            const madlibs = `Yesterday, the ${noun} suddenly ${verb} a ${noun2}, then a ${noun3} scared the ${noun4} before anyone could ${verb2}.`;
+
+            document.getElementById('result').innerText = madlibs;
+        }
+    </script>
+</body>
+</html>
